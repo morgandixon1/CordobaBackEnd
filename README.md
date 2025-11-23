@@ -1,5 +1,10 @@
 # Cordoba - Terrain & Building Data Processor
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python 3.7+](https://img.shields.io/badge/python-3.7+-blue.svg)](https://www.python.org/downloads/)
+[![GitHub issues](https://img.shields.io/github/issues/morgandixon1/CordobaBackEnd)](https://github.com/morgandixon1/CordobaBackEnd/issues)
+[![GitHub stars](https://img.shields.io/github/stars/morgandixon1/CordobaBackEnd)](https://github.com/morgandixon1/CordobaBackEnd/stargazers)
+
 A Python-based tool for processing and visualizing terrain elevation data, buildings, and road networks using Mapbox and OpenTopoData APIs.
 
 ## Features
@@ -158,15 +163,13 @@ Data is exported in JSON format with the following structure:
 
 ## Contributing
 
-Contributions are welcome! Please:
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Submit a pull request
+Contributions are welcome! We appreciate your help in making Cordoba better.
+
+Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct and the process for submitting pull requests.
 
 ## License
 
-[Add your chosen license here - e.g., MIT, GPL, Apache 2.0]
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Acknowledgments
 
