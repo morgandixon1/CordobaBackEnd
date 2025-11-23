@@ -1,0 +1,217 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f0f0;
+  }
+  
+  .interface-container {
+    display: flex;
+    height: 100vh;
+  }
+  
+  .content {
+    display: flex;
+    flex-grow: 1;
+    padding: 20px;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    transition: margin-left 0.3s ease;
+  }
+  
+  .model-icons {
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .model-icons object {
+    color: #007bff;
+    display: block;
+    margin: 10% 0;
+    width: 3vw;
+    height: 3vw;
+    transition: transform 0.3s, filter 0.3s;
+  }
+  
+  .model-icons object:hover {
+    filter: brightness(80%);
+    transform: scale(1.1);
+    color: #e0e0e0;
+  }
+  
+  .model-icons object:active {
+    transform: translateY(2%);
+  }
+  
+  .content > h2 {
+    text-align: center;
+    color: #333333;
+    font-weight: bold;
+    font-size: 24px;
+  }
+  
+  .model-viewer {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+  }
+  
+  .sidebar {
+    position: relative;
+    width: 30%;
+    background-color: #f8f8f8;
+    color: #333333;
+    display: flex;
+    flex-direction: column;
+    transition: width 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: 100%;
+  }
+  
+  .chat-container {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow-y: auto;
+  }
+  
+  .sidebar h3 {
+    color: #333333;
+    font-weight: bold;
+    margin: 15px;
+    font-size: 20px;
+  }
+  
+  .sidebar.collapsed {
+    width: 0;
+  }
+  
+  .sidebar.collapsed .chat-container,
+  .sidebar.collapsed h3 {
+    display: none;
+  }
+  
+  .sidebar .collapse-btn,
+  .sidebar .expand-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    background-color: #e0e0e0;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+  }
+  
+  .sidebar .collapse-btn:hover,
+  .sidebar .expand-btn:hover {
+    background-color: #c0c0c0;
+  }
+  
+  .sidebar .collapse-btn img,
+  .sidebar .expand-btn img {
+    width: 60%;
+    height: 60%;
+  }
+  
+  .sidebar .collapse-btn {
+    right: -20px;
+  }
+  
+  .sidebar .expand-btn {
+    left: -20px;
+    transform: translateY(-50%) rotate(180deg);
+  }
+  
+  .sidebar.collapsed .collapse-btn {
+    display: none;
+  }
+  
+  .sidebar:not(.collapsed) .expand-btn {
+    display: none;
+  }
+  
+  .chat {
+    overflow-y: auto;
+    background-color: #f8f8f8;
+    flex-grow: 1;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .chat-message {
+    margin-bottom: 10px;
+    padding: 15px;
+    color: white;
+    max-width: 80%;
+    border-radius: 15px;
+  }
+  
+  .user-message {
+    background-color: #007bff;
+    margin-left: auto;
+  }
+  
+  .bot-message {
+    background-color: #e0e0e0;
+    color: #333333;
+    margin-right: auto;
+  }
+  
+  #messageInput,
+  #sendBtn {
+    flex-grow: 1;
+    padding: 10px;
+    border-radius: 15px 0 0 15px;
+  }
+  
+  #messageInput {
+    border: 1px solid #ccc;
+    border-radius: 15px 0 0 15px;
+    margin-right: -1px;
+  }
+  
+  #sendBtn {
+    width: auto;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 0 15px 15px 0;
+  }
+  
+  #sendBtn:hover {
+    background-color: #0056b3;
+  }
+  
+  .footer {
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .sidebar.collapsed + .content {
+    margin-left: 0;
+  }

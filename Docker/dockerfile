@@ -1,0 +1,26 @@
+# Use the official Python image from the Docker Hub
+FROM python:3.11.3
+
+# Set the working directory in the container
+WORKDIR /app
+
+# Install GDAL and dependencies
+RUN apt-get update && apt-get install -y \
+    gdal-bin \
+    libgdal-dev
+
+# Set GDAL environment variables
+ENV CPLUS_INCLUDE_PATH=/usr/include/gdal
+ENV C_INCLUDE_PATH=/usr/include/gdal
+
+# Copy the current directory contents into the container at /app
+COPY . /app
+
+# Install any needed packages specified in requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Expose port 443 for HTTPS
+EXPOSE 443
+
+# Run servercode.py when the container launches
+CMD ["python", "servercode.py"]

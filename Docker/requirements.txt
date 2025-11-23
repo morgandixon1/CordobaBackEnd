@@ -1,0 +1,13 @@
+flask
+requests
+numpy
+matplotlib
+pillow
+opencv-python-headless
+scikit-image
+shapely
+rdp
+scipy
+rasterio
+pyproj
+python-dotenv

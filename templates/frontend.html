@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cordoba</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.plot.ly/plotly-delaunay-latest.min.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="https://unpkg.com/ml-dbscan@5.0.0/dist/ml-dbscan.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three/examples/js/loaders/OBJLoader.js"></script>
+</head>
+<body>
+  <div class="interface-container">
+    <div class="sidebar collapsed">
+      <div class="chat-container">
+        <div class="chat" id="chat">
+          <!-- Chat messages will appear here -->
+        </div>
+        <div class="footer">
+          <input type="text" id="messageInput" placeholder="Enter Prompt" required>
+          <button id="sendBtn">Send</button>
+        </div>
+      </div>
+      <button class="collapse-btn">
+        <img src="/static/icons/collapse.png" alt="Collapse">
+      </button>
+      <button class="expand-btn">
+        <img src="/static/icons/collapse.png" alt="Expand">
+      </button>
+    </div>
+    <div class="content">
+      <h2>Cordoba</h2>
+      <form id="address-form">
+        <label for="address">Enter an address:</label>
+        <input type="text" id="address" name="address" value="5411 N Martha loop Coeur d'Alene Idaho">
+        <button type="submit">Plot Terrain</button>
+      </form>
+      <div id="voxelplot" class="model-viewer">
+        <!-- 3D Model Will Go Here -->
+        <div class="model-icons">
+          <object type="image/svg+xml" data="/static/icons/download.svg"></object>
+          <object type="image/svg+xml" data="/static/icons/house_off.svg"></object>
+          <object type="image/svg+xml" data="/static/icons/landscape_off.svg"></object>
+          <object id="map-icon" type="image/svg+xml" data="/static/icons/map_off.svg"></object>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="/static/frontend.js"></script>
+</body>
+</html>

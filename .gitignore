@@ -1,0 +1,91 @@
+# API Keys and Secrets
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+cert.pem
+key.pem
+config.json
+secrets.json
+credentials.json
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environment
+venv/
+ENV/
+env/
+.venv
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+._*
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# Data files (potentially sensitive locations)
+area3.json
+voxelgridtest.json
+assembly_data.json
+map_info.json
+roadspline.png
+terrain_data.json
+
+# Output files
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.tif
+*.tiff
+
+# Logs
+*.log
+logs/
+
+# Flask
+instance/
+.webassets-cache
+
+# Docker
+docker-compose.override.yml
+
+# OS Files
+Thumbs.db
+.DS_Store
